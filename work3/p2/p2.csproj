@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>p2</RootNamespace>
-    <AssemblyName>p2</AssemblyName>
+    <RootNamespace>work</RootNamespace>
+    <AssemblyName>work</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -196,6 +196,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\blogController.cs" />
+    <Compile Include="BlogDatabase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -266,6 +268,10 @@
     <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Home\Save.cshtml" />
     <Content Include="Views\Home\Add.cshtml" />
+    <Content Include="Views\blog\Add.cshtml" />
+    <Content Include="Views\blog\Edit.cshtml" />
+    <Content Include="Views\blog\show.cshtml" />
+    <Content Include="Views\blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

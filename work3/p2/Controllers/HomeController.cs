@@ -34,8 +34,8 @@ namespace p2.Controllers
                 
             };
             ViewBag.data = data;
-            ViewData["data"] = data;
-            ViewData.Model = data;
+            //ViewData["data"] = data;
+           // ViewData.Model = data;
             return View();
         }
         public ActionResult Add()
