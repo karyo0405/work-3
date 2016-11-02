@@ -9,14 +9,19 @@ namespace p2.Controllers
     public class BlogController : Controller
     {
      
-        public ActionResult Index()
+        public ActionResult Index(string a)
         {
             var db = new BlogDatabase();
 
             db.Database.CreateIfNotExists();
 
-            var lst = db.BlogArticles.OrderByDescending(o => o.Id).ToList();
-            ViewBag.BlogArticles = lst;
+            var lst = db.BlogArticles.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(a))
+            {
+                lst = lst.Where(o => o.Subject.Contains(a));
+            }
+            ViewBag.BlogArticles = lst.OrderByDescending(o => o.Id).ToList();
+            ViewBag.a = a;
 
             return View();
         }
