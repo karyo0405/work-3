@@ -32,16 +32,19 @@ namespace p2.Controllers
             return View();
         }
 
-        public ActionResult Save(string subject, string body)
+        public ActionResult Save(BlogArticle model)
         {
-            var article = new BlogArticle();
-            article.Subject = subject;
-            article.Body = body;
-            article.DateCreated = DateTime.Now;
-
-            var db = new BlogDatabase();
-            db.BlogArticles.Add(article);
-            db.SaveChanges();
+            if (ModelState.IsValid)
+                  {
+                var article = new BlogArticle();
+                article.Subject = model.Subject;
+                article.Body = model.Body;
+                article.DateCreated = DateTime.Now;
+                
+                var db = new BlogDatabase();
+                db.BlogArticles.Add(article);
+                db.SaveChanges();
+                     }
 
             return Redirect("Index");
         }
