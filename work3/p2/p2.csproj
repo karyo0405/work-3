@@ -200,6 +200,7 @@
     <Compile Include="BlogDatabase.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\blogController.cs" />
+    <Compile Include="Controllers\CookieDemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -274,6 +275,7 @@
     <Content Include="Views\blog\Edit.cshtml" />
     <Content Include="Views\blog\show.cshtml" />
     <Content Include="Views\blog\Index.cshtml" />
+    <Content Include="Views\CookieDemo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
