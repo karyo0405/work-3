@@ -29,7 +29,14 @@ namespace p2.Controllers
 
         public ActionResult Add()
         {
-            return View();
+                        if (Request.Cookies["isauth"] != null && Request.Cookies["isauth"].Value == "true")
+                            {
+                                return View();
+                            }
+                        else
+                           {
+                                return RedirectToAction("login", "cookiedemo");
+                            }
         }
 
         public ActionResult Save(BlogArticle model)
