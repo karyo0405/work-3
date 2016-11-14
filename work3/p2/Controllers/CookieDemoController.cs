@@ -38,7 +38,7 @@ namespace p2.Controllers
 
         public ActionResult PostLogin(string username, string password)
         {
-            if (username == "abc" && password == "123")
+            if (username == "KARYO" && password == "123")
             {
                 var cookie = new HttpCookie("isauth", "true");
                 Response.Cookies.Add(cookie);
